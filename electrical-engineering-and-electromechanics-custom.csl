@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
   <info>
-    <title>Electrical Engineering &amp; Electromechanics (custom)</title>
-    <id>https://github.com/congtrangnvt-gif/citation-styles/electrical-engineering-and-electromechanics-custom</id>
-    <link href="https://github.com/congtrangnvt-gif/citation-styles/electrical-engineering-and-electromechanics-custom" rel="self"/>
+    <title>Electrical Engineering &amp; Electromechanics (compact)</title>
+    <id>https://github.com/congtrangnvt-gif/citation-styles/electrical-engineering-and-electromechanics-compact</id>
+    <link href="https://github.com/congtrangnvt-gif/citation-styles/electrical-engineering-and-electromechanics-compact" rel="self"/>
     <category citation-format="numeric"/>
     <updated>2026-11-07T00:00:00+00:00</updated>
   </info>
@@ -41,16 +41,19 @@
       <text variable="citation-number" prefix="[" suffix="]"/>
     </layout>
   </citation>
-  <bibliography second-field-align="flush" entry-spacing="0">
+  <bibliography entry-spacing="0" line-spacing="1">
     <layout suffix=".">
-      <text variable="citation-number" suffix="." font-weight="bold" font-style="italic"/>
+      <text variable="citation-number" suffix=".&#160; " font-weight="bold" font-style="italic"/>
       <group delimiter=". ">
         <text macro="author"/>
         <text variable="title"/>
         <text macro="publication"/>
         <choose>
           <if variable="DOI">
-            <text variable="DOI" prefix="doi: https://doi.org/"/>
+            <group delimiter=" ">
+              <text value="doi:"/>
+              <text variable="DOI" prefix="https://doi.org/"/>
+            </group>
           </if>
           <else-if variable="URL">
             <text variable="URL"/>
