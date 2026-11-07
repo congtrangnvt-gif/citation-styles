@@ -2,7 +2,8 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
   <info>
     <title>Electrical Engineering &amp; Electromechanics (custom)</title>
-    <id>urn:uuid:83fc6a4d-cf77-44cd-b040-53c26534a131</id>
+    <id>https://github.com/congtrangnvt-gif/citation-styles/electrical-engineering-and-electromechanics-custom</id>
+    <link href="https://github.com/congtrangnvt-gif/citation-styles/electrical-engineering-and-electromechanics-custom" rel="self"/>
     <category citation-format="numeric"/>
     <updated>2026-11-07T00:00:00+00:00</updated>
   </info>
@@ -32,7 +33,6 @@
         <label variable="page" form="short"/>
         <text variable="page"/>
       </group>
-      <text variable="article-number" prefix="art. no. "/>
     </group>
   </macro>
   <citation>
