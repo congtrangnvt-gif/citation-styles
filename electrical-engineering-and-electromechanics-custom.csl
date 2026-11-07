@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+  <info>
+    <title>Electrical Engineering &amp; Electromechanics (custom)</title>
+    <id>urn:uuid:83fc6a4d-cf77-44cd-b040-53c26534a131</id>
+    <category citation-format="numeric"/>
+    <updated>2026-11-07T00:00:00+00:00</updated>
+  </info>
+  <macro name="author">
+    <names variable="author">
+      <name name-as-sort-order="all" sort-separator=" " initialize-with="." delimiter=", "/>
+      <substitute>
+        <names variable="editor"/>
+      </substitute>
+    </names>
+  </macro>
+  <macro name="publication">
+    <group delimiter=", ">
+      <choose>
+        <if type="paper-conference">
+          <text variable="container-title" font-style="italic" prefix="In: "/>
+          <text variable="event-place"/>
+        </if>
+        <else>
+          <text variable="container-title" font-style="italic"/>
+        </else>
+      </choose>
+      <date variable="issued"><date-part name="year"/></date>
+      <text variable="volume" prefix="vol. "/>
+      <text variable="issue" prefix="no. "/>
+      <group delimiter=" ">
+        <label variable="page" form="short"/>
+        <text variable="page"/>
+      </group>
+      <text variable="article-number" prefix="art. no. "/>
+    </group>
+  </macro>
+  <citation>
+    <sort><key variable="citation-number"/></sort>
+    <layout delimiter=", ">
+      <text variable="citation-number" prefix="[" suffix="]"/>
+    </layout>
+  </citation>
+  <bibliography second-field-align="flush" entry-spacing="0">
+    <layout suffix=".">
+      <text variable="citation-number" suffix="." font-weight="bold" font-style="italic"/>
+      <group delimiter=". ">
+        <text macro="author"/>
+        <text variable="title"/>
+        <text macro="publication"/>
+        <choose>
+          <if variable="DOI">
+            <text variable="DOI" prefix="doi: https://doi.org/"/>
+          </if>
+          <else-if variable="URL">
+            <text variable="URL"/>
+          </else-if>
+        </choose>
+      </group>
+    </layout>
+  </bibliography>
+</style>
